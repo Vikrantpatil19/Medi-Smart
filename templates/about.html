@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+             .logo {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            margin-top: 0;
+            margin-left: 5px;
+            border-radius: 50%;
+        }
+        .myimg {
+            width: 50px;
+            height: 50px;
+        }
+        .info-section {
+            background-color: white; /* Set background color to white */
+            color: black; /* Set text color to black */
+            padding: 30px 10px;
+            text-align: center;
+        }
+        .info-section h2 {
+            margin-bottom: 20px;
+        }
+        .info-section p {
+            margin-bottom: 30px;
+        }
+        .search-section {
+            background-color: #007BFF; /* Blue background */
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+        }
+        .search-section h4 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 30px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .search-box:hover {
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        .input-section,
+        .button-section {
+            border-radius: 30px;
+            padding: 15px 20px;
+        }
+        .input-section {
+            background-color: white;
+            margin-bottom: 10px;
+        }
+        .button-section {
+            background-color: #f1f1f1; /* Light gray background */
+            text-align: center;
+        }
+        .input-section .form-control {
+            border: none;
+            font-size: 18px;
+            border-radius: 30px;
+            outline: none;
+            width: 100%;
+        }
+        .button-section .btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .button-section .btn:hover {
+            background-color: #0056b3;
+        }
+
+
+    </style>
+  </head>
+  <body>
+
+
+    <!-- Navigation Bar -->
+<nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="light">
+    <div class="container-fluid">
+        <div class="logo">
+            <img class="myimg" src="{{url_for('static', filename='img.png')}}" alt="MediSmart Logo"/>
+        </div>
+        <a class="navbar-brand text-white fs-4" href="#">MediSmart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white fs-5" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fs-5 active" aria-current="page" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fs-5" href="/contact">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="info-section">
+    <div class="container">
+        <h2 class="display-4">About MediSmart</h2>
+        <p class="lead">Welcome to our cutting-edge Personalized Medical Recommendation System, a powerful platform designed to assist users in understanding and managing their health.</p>
+        <p>Leveraging the capabilities of machine learning, our system analyzes user-input symptoms to predict potential diseases accurately. Here's what sets our system apart:</p>
+        <ul>
+            <li><strong>User-Friendly Interface:</strong> Our intuitive interface allows users to input their symptoms effortlessly, creating a seamless user experience.</li>
+            <li><strong>Advanced Machine Learning Models:</strong> We've integrated state-of-the-art machine learning models that accurately predict diseases based on input symptoms, ensuring reliable and precise results.</li>
+            <li><strong>Tailored Recommendations:</strong> Receive personalized recommendations for the top 5 medicines, prescription details, and even workout routines based on the predicted disease.</li>
+            <li><strong>Flask App Integration:</strong> The entire system is powered by a Flask web application, making it easily accessible to users. Experience the convenience of accessing healthcare recommendations from anywhere.</li>
+            <li><strong>Privacy and Security:</strong> We prioritize user privacy and data security. Your health information is handled with the utmost confidentiality, adhering to the highest industry standards.</li>
+            <li><strong>Continuous Improvement:</strong> Our system is designed for continuous improvement. As we gather more data, the machine learning models evolve, providing increasingly accurate and relevant recommendations.</li>
+        </ul>
+        <p>Take charge of your health with our Personalized Medical Recommendation System. Your well-being is our priority, and we're dedicated to providing you with the tools and insights you need for a healthier, happier life.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-2">
+    <p class="mb-0">Made by Vikrant</p>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
